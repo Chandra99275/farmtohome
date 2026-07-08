@@ -541,6 +541,23 @@ function UserDashboard() {
   >
     👤 <span>Profile</span>
   </Link>
+  <Link to="/nearby-farms">
+  <button
+    style={{
+      background: "#2e7d32",
+      color: "#fff",
+      padding: "12px 25px",
+      border: "none",
+      borderRadius: "8px",
+      cursor: "pointer",
+      fontSize: "16px",
+      fontWeight: "600",
+      marginTop: "15px",
+    }}
+  >
+    🗺️ Nearby Farms
+  </button>
+</Link>
 
 
         </div>

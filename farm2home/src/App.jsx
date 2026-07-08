@@ -15,89 +15,56 @@ import Checkout from "./pages/Checkout";
 import CustomerOrders from "./pages/CustomerOrders";
 import FarmerOrders from "./pages/FarmerOrders";
 
-// New page
+// Farm Location Pages
 import AddFarmLocation from "./pages/AddFarmLocation";
-
+import NearbyFarmsPage from "./pages/NearbyFarmsPage";
 
 function App() {
-
   return (
-
     <Routes>
 
+      {/* Home */}
       <Route path="/" element={<Home />} />
 
+      {/* Authentication */}
       <Route path="/login" element={<Login />} />
-
       <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
 
-      <Route 
-        path="/forgot-password" 
-        element={<ForgotPassword />} 
-      />
+      {/* Dashboards */}
+      <Route path="/userdashboard" element={<UserDashboard />} />
+      <Route path="/farmerdashboard" element={<FarmerDashboard />} />
 
-      <Route 
-        path="/userdashboard" 
-        element={<UserDashboard />} 
-      />
+      {/* Profiles */}
+      <Route path="/farmerprofile" element={<FarmerProfile />} />
+      <Route path="/customerprofile" element={<CustomerProfile />} />
 
-      <Route 
-        path="/farmerdashboard" 
-        element={<FarmerDashboard />} 
-      />
+      {/* Products */}
+      <Route path="/products" element={<Products />} />
+      <Route path="/productdetails" element={<ProductDetails />} />
 
-      <Route 
-        path="/farmerprofile" 
-        element={<FarmerProfile />} 
-      />
+      {/* Cart & Checkout */}
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<Checkout />} />
 
-      <Route 
-        path="/customerprofile" 
-        element={<CustomerProfile />} 
-      />
+      {/* Orders */}
+      <Route path="/customerorders" element={<CustomerOrders />} />
+      <Route path="/farmerorders" element={<FarmerOrders />} />
 
-      <Route 
-        path="/cart" 
-        element={<Cart />} 
-      />
-
-      <Route 
-        path="/products" 
-        element={<Products />} 
-      />
-
-      <Route 
-        path="/productdetails" 
-        element={<ProductDetails />} 
-      />
-
-      <Route 
-        path="/checkout" 
-        element={<Checkout />} 
-      />
-
-      <Route 
-        path="/customerorders" 
-        element={<CustomerOrders />} 
-      />
-
-      <Route 
-        path="/farmerorders" 
-        element={<FarmerOrders />} 
-      />
-
-
-      {/* Farmer Location Feature */}
+      {/* Farmer Location */}
       <Route
         path="/add-farm-location"
         element={<AddFarmLocation />}
       />
 
+      {/* Nearby Farms */}
+      <Route
+        path="/nearby-farms"
+        element={<NearbyFarmsPage />}
+      />
 
     </Routes>
-
   );
-
 }
 
 export default App;
